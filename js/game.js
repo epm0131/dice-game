@@ -12,14 +12,22 @@
         var dieNumTwo = document.querySelector('.dice aside:last-child').innerText;
 
         var dieOne = Math.floor(Math.random()* 6 + 1);
-        console.log(dieOne);
 
         var dieTwo = Math.floor(Math.random()* 6 + 1);
-        console.log(dieTwo);
 
-        var diceTotal = dieOne + dieTwo;
-        console.log(diceTotal)
-        
+        var score = dieOne + dieTwo;
+
+
+        console.log(score);
+        document.querySelector('.dice aside:first-child').innerText = dieOne;
+        document.querySelector('.dice aside:last-child').innerText = dieTwo;
+
+        if (score === 11) {
+          alert("You Win!!!")
+        }
+
+
+
 
 
 
