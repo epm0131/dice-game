@@ -2,7 +2,11 @@ main {
   border: 2px solid #cc66cc; }
 
 aside {
+  float: left;
+  width: 32px;
   border: 2px solid #cc66cc;
-  float: left; }
+  padding: 10px;
+  text-align: center;
+  margin: 5px; }
 
 /*# sourceMappingURL=style.css.map */

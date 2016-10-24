@@ -8,7 +8,21 @@
     document.querySelector('button').addEventListener('click', function buttonClicked() {
 
         var dieNumOne = document.querySelector('.dice aside:first-child').innerText;
-        console.log(dieNumOne);
+
+        var dieNumTwo = document.querySelector('.dice aside:last-child').innerText;
+
+        var dieOne = Math.floor(Math.random()* 6 + 1);
+        console.log(dieOne);
+
+        var dieTwo = Math.floor(Math.random()* 6 + 1);
+        console.log(dieTwo);
+
+        var diceTotal = dieOne + dieTwo;
+        console.log(diceTotal)
+        
+
+
+
 
     });
 
