@@ -1,12 +1,16 @@
 main {
-  border: 2px solid #cc66cc; }
+  margin: 0;
+  border: 2px solid #cc66cc;
+  text-align: center; }
 
 aside {
   float: left;
   width: 32px;
   border: 2px solid #cc66cc;
   padding: 10px;
-  text-align: center;
-  margin: 5px; }
+  text-align: center; }
+
+button {
+  float: left; }
 
 /*# sourceMappingURL=style.css.map */
