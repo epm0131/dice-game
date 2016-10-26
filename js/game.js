@@ -1,20 +1,19 @@
 (function diceGame() {
 
-  var ettoreGame = {
-    ettoreStart: 0,
-    ettoreRound: []
+  var startTime = new Date();
 
+  var ettoreGame = {
+    ettoreStart: startTime,
+    ettoreRound: []
   }
-  var dice = {};
-  var diceArray = [];
 
   function setDateTime(){
-    var now = new Date();
-    dice.startDate = ( '' + now.getFullYear() + "-" + (now.getMonth()+ 1) + "-" + now.getDate() + " " + now.getHours() +":"+ now.getMinutes());
-    return "Game Started " + dice.startDate;
+    ettoreGame.startDate = ( '' + startTime.getFullYear() + "-" + (startTime.getMonth()+ 1) + "-" + startTime.getDate() + " " + startTime.getHours() +":"+ startTime.getMinutes());
+    return "Game Started " + ettoreGame.startDate;
   }
-  document.querySelector('.game-start').innerText = setDateTime();
 
+  document.querySelector('.game-start').innerText = setDateTime();
+  console.log(ettoreGame);
 
   // Use document.querySelector('...') to find HTML elements
   // The argument into the function is a CSS selector!
@@ -38,7 +37,6 @@
     ettoreGame.ettoreRound.push(score);
 
 
-    console.log(score);
     document.querySelector('.dice aside:first-child').innerText = dieOne;
     document.querySelector('.dice aside:last-child').innerText = dieTwo;
 
@@ -49,7 +47,6 @@
       var now = new Date();
       var endGame =  ( now.getHours() +":"+ now.getMinutes() );
 
-      counter = 0;
     }
     else{
       document.querySelector('.result').innerText = "Try Again"
