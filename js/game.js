@@ -1,6 +1,8 @@
 (function diceGame() {
 
   var startTime = new Date();
+  var pageLoadedAt = (startTime/1000);
+  console.log(pageLoadedAt);
 
   var ettoreGame = {
     ettoreStart: startTime,
@@ -12,8 +14,13 @@
     return "Game Started " + ettoreGame.startDate;
   }
 
+  function secondsSinceTime (time) {
+    var clickTime = (new Date()) / 1000;
+    var diff = Math.round(clickTime - time);
+    return diff;
+  }
+
   document.querySelector('.game-start').innerText = setDateTime();
-  console.log(ettoreGame);
 
   // Use document.querySelector('...') to find HTML elements
   // The argument into the function is a CSS selector!
@@ -22,10 +29,11 @@
 
   document.querySelector('button').addEventListener('click', function buttonClicked() {
 
+
     function setMessage()
     {
 
-      return "(It took you " + ettoreGame.ettoreRound.length + " tries and 93 seconds ) ";
+      return "It took you " + ettoreGame.ettoreRound.length + " tries and " + secondsSinceTime(pageLoadedAt) + " seconds ";
     }
 
     var dieOne = Math.floor(Math.random()* 6 + 1);
@@ -44,8 +52,6 @@
       document.querySelector('.result').innerText = "Winner!"
       document.querySelector('.message').innerText = setMessage();
       ettoreGame.ettoreRound=[];
-      var now = new Date();
-      var endGame =  ( now.getHours() +":"+ now.getMinutes() );
 
     }
     else{
