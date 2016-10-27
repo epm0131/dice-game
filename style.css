@@ -1,16 +1,5 @@
-main {
-  margin: 0;
-  border: 2px solid #cc66cc;
-  text-align: center; }
-
-aside {
-  float: left;
-  width: 32px;
-  border: 2px solid #cc66cc;
-  padding: 10px;
-  text-align: center; }
-
-button {
-  float: left; }
+body {
+  border: 2px solid #000000;
+  margin: 0; }
 
 /*# sourceMappingURL=style.css.map */
